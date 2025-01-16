@@ -1,8 +1,15 @@
 package org.example;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Objects;
+
 public class Person {
+    @JsonProperty("vardas")
     private String name;
+    @JsonProperty("amžius")
     private Integer age;
+    @JsonProperty("elektroninis paštas")
     private String email;
 
     public Person() {
@@ -21,6 +28,18 @@ public class Person {
                 ", age=" + age +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(name, person.name) && Objects.equals(age, person.age) && Objects.equals(email, person.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, email);
     }
 
     public String getName() {

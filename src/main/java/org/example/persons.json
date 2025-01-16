@@ -1,0 +1,9 @@
+[ {
+  "vardas" : "Jonas",
+  "amžius" : 30,
+  "elektroninis paštas" : "jonas.jonaitis@gmail.com"
+}, {
+  "vardas" : "Petras",
+  "amžius" : 44,
+  "elektroninis paštas" : "petras.petraitis@gmail.com"
+} ]
